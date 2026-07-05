@@ -1,0 +1,39 @@
+{
+  "personas": [
+    { "name": "A. (analista de compras y logística)", "role": "analista", "primary": true },
+    { "name": "E. (especialista de ecommerce y servicio al cliente)", "role": "especialista", "primary": true },
+    { "name": "O. (operador de tienda)", "role": "operador", "primary": true },
+    { "name": "P. (proveedor)", "role": "proveedor", "primary": true },
+    { "name": "C. (cliente)", "role": "cliente", "primary": true }
+  ],
+  "pains": [
+    { "id": "visibilidad-post-envio", "source": "analista_de_compras_y_logistica.md", "persona": "analista" },
+    { "id": "stock-proveedor-no-confiable", "source": "analista_de_compras_y_logistica.md", "persona": "analista" },
+    { "id": "confirmacion-proveedor-manual", "source": "analista_de_compras_y_logistica.md", "persona": "analista" },
+    { "id": "tracking-disperso", "source": "analista_de_compras_y_logistica.md", "persona": "analista" },
+    { "id": "evidencia-entrega-faltante", "source": "analista_de_compras_y_logistica.md", "persona": "analista" },
+    { "id": "conciliacion-contable", "source": "analista_de_compras_y_logistica.md", "persona": "analista" },
+    { "id": "pedidos-multiproveedores", "source": "analista_de_compras_y_logistica.md", "persona": "analista" },
+    { "id": "falta-respuesta-rapida", "source": "especialista_de_ecommerce_y_servicio_al_cliente.md", "persona": "especialista" },
+    { "id": "checkout-mixto-confuso", "source": "especialista_de_ecommerce_y_servicio_al_cliente.md", "persona": "especialista" },
+    { "id": "notificaciones-genericas", "source": "especialista_de_ecommerce_y_servicio_al_cliente.md", "persona": "especialista" },
+    { "id": "visibilidad-entrega-parcial", "source": "especialista_de_ecommerce_y_servicio_al_cliente.md", "persona": "especialista" },
+    { "id": "cambio-fecha-reactivo", "source": "especialista_de_ecommerce_y_servicio_al_cliente.md", "persona": "especialista" },
+    { "id": "disponibilidad-stock-no-confiable", "source": "operador_de_tienda.md", "persona": "operador" },
+    { "id": "reserva-fisica-manual", "source": "operador_de_tienda.md", "persona": "operador" },
+    { "id": "sin-regla-no-retiro", "source": "operador_de_tienda.md", "persona": "operador" },
+    { "id": "notificacion-tienda-sin-alerta", "source": "operador_de_tienda.md", "persona": "operador" },
+    { "id": "trazabilidad-confirmacion-retiro", "source": "operador_de_tienda.md", "persona": "operador" },
+    { "id": "pedido-incompleto-al-recibir", "source": "entrevista_proveedor.md", "persona": "proveedor" },
+    { "id": "cambios-tardios-post-aceptacion", "source": "entrevista_proveedor.md", "persona": "proveedor" },
+    { "id": "stock-doble-canal", "source": "entrevista_proveedor.md", "persona": "proveedor" },
+    { "id": "sin-evidencia-estado-salida", "source": "entrevista_proveedor.md", "persona": "proveedor" },
+    { "id": "novedad-sin-registro-inmediato", "source": "entrevista_proveedor.md", "persona": "proveedor" },
+    { "id": "estado-pedido-no-granular", "source": "cliente.md", "persona": "cliente" },
+    { "id": "info-entrega-post-pago", "source": "cliente.md", "persona": "cliente" },
+    { "id": "confusion-confirmado-vs-listo", "source": "cliente.md", "persona": "cliente" },
+    { "id": "proveedor-no-identificado", "source": "cliente.md", "persona": "cliente" },
+    { "id": "sin-opciones-stock-fallido", "source": "cliente.md", "persona": "cliente" },
+    { "id": "canal-atencion-fragmentado", "source": "cliente.md", "persona": "cliente" }
+  ]
+}

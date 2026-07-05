@@ -1,0 +1,44 @@
+{
+  "hypotheses": [
+    {
+      "id": "H-01",
+      "risk": "alto",
+      "assumption": "Los proveedores usaran el portal como canal principal si el flujo por pedido requiere 3 o menos acciones por hito y la orden llega con informacion completa.",
+      "hypothesis": "Creemos que el proveedor completara los 4 hitos del ciclo Dropshipping (aceptar, despachar, entregar, novedad) a traves del portal sin volver al correo, si el flujo de cada hito requiere 3 acciones o menos y la informacion de la orden llega completa, porque el proveedor entrevistado advirtio explicitamente que vuelve al correo cuando hay demasiados campos.",
+      "metric": "% de hitos del ciclo Dropshipping registrados directamente por el proveedor en el portal sin intervencion manual del analista",
+      "threshold": ">=70% de los hitos registrados en el portal en 4 semanas de piloto con al menos 3 proveedores",
+      "experiment": "Concierge/Mago de Oz: crear un formulario minimo (Google Forms o equivalente) que simule los 4 hitos del portal; invitar a 3 proveedores a usarlo durante 2 semanas con pedidos reales. El analista registra los resultados en el sistema actual. Medir hitos recibidos por formulario vs. por correo. Caja de tiempo: 2 semanas de piloto + 3 dias de analisis.",
+      "decision": "Si pasa (>=70%): construir el portal. Si falla (<70%): hacer sesion de usabilidad con los proveedores que no usaron el formulario, identificar que los bloqueo y redisenar el flujo antes de construir."
+    },
+    {
+      "id": "H-02",
+      "risk": "alto",
+      "assumption": "Las ordenes Dropshipping que se generan hoy contienen suficiente informacion para que el proveedor las procese sin consultas adicionales.",
+      "hypothesis": "Creemos que el proveedor podra aceptar y procesar el 80% de las ordenes sin consulta previa, si la orden incluye los 8 campos de R-32 (codigo, descripcion, cantidad, direccion completa, ciudad, contacto, fecha esperada, condiciones especiales), porque hoy el proveedor reporta que casi siempre tiene que preguntar algo antes de procesar.",
+      "metric": "% de los ultimos 30 pedidos Dropshipping historicos que tenian los 8 campos de R-32 completos sin necesidad de consulta adicional",
+      "threshold": ">=80% de los 30 pedidos auditados tienen todos los campos completos",
+      "experiment": "Auditoria de datos historicos: el analista revisa los ultimos 30 pedidos Dropshipping en el sistema actual y verifica cuantos tenian los 8 campos completos. Contrasta con registros de correos donde el proveedor solicito datos faltantes. No requiere construir nada. Caja de tiempo: 3 dias.",
+      "decision": "Si pasa (>=80% completos): construir la automatizacion con confianza. Si falla (<80%): identificar los campos faltantes, definir la fuente de datos y resolverlos antes de automatizar."
+    },
+    {
+      "id": "H-03",
+      "risk": "medio",
+      "assumption": "Los 4 hitos de notificacion clave (aceptado, despachado, entregado, cambio de fecha) cubren la mayoria de las consultas que los clientes hacen sobre estado de pedidos Dropshipping.",
+      "hypothesis": "Creemos que el volumen de consultas de clientes sobre estado de pedidos Dropshipping disminuira en al menos 50%, si el cliente recibe notificaciones en los 4 hitos clave, porque el cliente entrevistado llamo exactamente para preguntar esos estados y dijo que no necesita mensajes por movimientos internos.",
+      "metric": "Numero de contactos entrantes al area de servicio al cliente sobre estado de pedidos Dropshipping por semana",
+      "threshold": "Reduccion de al menos 50% en contactos por semana en las 2 semanas del experimento vs. las 2 semanas previas",
+      "experiment": "Mago de Oz: durante 2 semanas el especialista envia manualmente los 4 tipos de notificacion (WhatsApp o email) en el momento exacto de cada hito. Medir contactos entrantes vs. las 2 semanas anteriores. Caja de tiempo: 2 semanas + 30 min/dia del especialista.",
+      "decision": "Si pasa (reduccion >=50%): construir el sistema automatico de notificaciones. Si falla (reduccion <50%): entrevistar a 3 clientes que igual llamaron e incorporar la informacion faltante antes de construir."
+    },
+    {
+      "id": "H-04",
+      "risk": "medio",
+      "assumption": "El analista adoptara la vista unificada del portal si consolida en un solo lugar toda la informacion que hoy busca en multiples fuentes.",
+      "hypothesis": "Creemos que el analista resolvera al menos el 60% de sus consultas de estado de pedidos Dropshipping desde la vista unificada sin consultar correo ni llamar al proveedor, si la vista muestra estado actual, proveedor asignado, fecha prometida, dias sin update y alerta de inactividad, porque el analista describio el tiempo que pierde revisando varias fuentes.",
+      "metric": "% de consultas de estado de pedidos Dropshipping que el analista resuelve desde la vista unificada sin recurrir a correo ni llamada directa al proveedor",
+      "threshold": ">=60% de consultas resueltas desde la vista en las 2 primeras semanas de piloto",
+      "experiment": "Prototipo navegable (solo lectura): configurar un tablero en Notion o Airtable actualizado manualmente durante 2 semanas. El analista registra en bitacora de 5 min/dia si consulto el tablero o fue al correo. Caja de tiempo: 3 dias configuracion + 2 semanas piloto.",
+      "decision": "Si pasa (>=60%): construir el modulo de vista unificada. Si falla (<60%): sesion de 1 hora con el analista para identificar que informacion le falta y ajustar el diseno antes de construir."
+    }
+  ]
+}

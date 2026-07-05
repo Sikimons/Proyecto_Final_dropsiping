@@ -1,0 +1,18 @@
+{
+    "$Comend": "This is the settings file for the Claude agent. It defines the hooks that will be executed before using certain tools.",
+    "hooks": {
+        "PreToolUse": [
+            {
+                "matcher": "Write|Edit",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "python3 .claude/hooks/dor-invest-gate.py"
+                    }
+                   
+
+                ]
+            }
+        ]
+    }
+}

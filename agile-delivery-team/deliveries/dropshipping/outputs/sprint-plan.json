@@ -1,0 +1,12 @@
+{
+  "delivery": "dropshipping",
+  "sprint": 1,
+  "sprint_goal": "El proveedor opera el ciclo Dropshipping completo desde el portal (aceptar, despachar, entregar, reportar novedades) con inventario reservado; el analista puede auditar cualquier cambio de estado con actor y timestamp — sin depender del correo en ninguno de los dos casos.",
+  "capacity": 20,
+  "committed": 20,
+  "stories": ["US-01", "US-02", "US-03", "US-04", "US-05", "US-08"],
+  "deferred_to_next_sprint": {
+    "reason": "US-06 (5 pts) excedería la capacidad (17 + 5 = 22 pts). US-07 y US-09 dependen de US-06 y US-08 respectivamente, por lo que tampoco entran. US-10, US-11, US-12 (E-03) requieren US-01 a US-03 como precondición — se planifican en Sprint 2 con E-02 completa.",
+    "stories": ["US-06", "US-07", "US-09", "US-10", "US-11", "US-12"]
+  }
+}

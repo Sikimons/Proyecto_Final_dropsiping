@@ -1,0 +1,20 @@
+{
+    "hooks": {
+        "PreToolUse": [
+            {
+                "matcher": "Write|Edit",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "python3 .claude/hooks/readiness-gate.py"
+                    },
+                    {
+                        "type": "command",
+                        "command": "python3 .claude/hooks/hypothesis-gate.py"
+                    }
+
+                ]
+            }
+        ]
+    }
+}
